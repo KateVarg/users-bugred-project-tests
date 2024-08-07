@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "diplom-users-tests"
+version = "0.1.0"
+description = ""
+authors = ["KateVarg <katye9470@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.2"
+selene = "^2.0.0rc9"
+allure-pytest = "^2.13.5"
+python-dotenv = "^1.0.1"
+requests = "^2.32.3"
+pytest-order = "^1.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = """
+        --alluredir=allure-results
+        """
