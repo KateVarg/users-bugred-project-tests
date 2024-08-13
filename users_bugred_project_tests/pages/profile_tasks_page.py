@@ -1,12 +1,12 @@
-from selene import browser, be, query, have
+from selene import browser, query, have
 import allure
-from diplom_users_tests.data.profile_task import Task
+from users_bugred_project_tests.data.profile_task import Task
 
 
-class OpenPageAddTask:
+class AddTask:
 
-    @allure.step('Открытие сайта')
-    def open(self):
+    @allure.step('Открытие страницы со списком задач пользователя')
+    def open_list_tasks(self):
         browser.open('/tasks')
         return self
 
@@ -20,30 +20,24 @@ class OpenPageAddTask:
         browser.element('h2').should(have.text('Добавление задачи'))
         return self
 
-
-open_page_add_task = OpenPageAddTask()
-
-
-class AddTask:
-
-    @allure.step('Открытие сайта')
-    def open(self):
+    @allure.step('Открытие страницы добавления задачи')
+    def open_add_task(self):
         browser.open('/tasks/add.html')
         return self
 
     @allure.step('Ввод названия задачи')
     def fill_task_name(self, name_task):
-        browser.element('input[name="name"]').type(name_task)
+        browser.element('[name="name"]').type(name_task)
         return self
 
     @allure.step('Ввод описания задачи')
     def fill_task_desc(self, desc_task):
-        browser.element('textarea[name="description"]').type(desc_task)
+        browser.element('.form-control, [name="description"]').type(desc_task)
         return self
 
     @allure.step('Нажатие на кнопку Добавить задачу')
     def click_add_task(self):
-        browser.element('input[value="Добавить задачу"]').click()
+        browser.element('[value="Добавить задачу"]').click()
         return self
 
     @allure.step('Добавление задачи')

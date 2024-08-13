@@ -1,5 +1,5 @@
-from selene import browser, query, have
-from diplom_users_tests.data.data_search import SearchUser
+from selene import browser, query
+from users_bugred_project_tests.data.data_search import SearchUser
 import allure
 
 
@@ -56,23 +56,3 @@ class SearchUsers:
 
 
 user_search = SearchUsers()
-
-
-class OpenProfilePage:
-
-    @allure.step('Открытие сайта')
-    def open(self):
-        browser.open('')
-        return self
-
-    @allure.step('Нажатие на кнопку Посмотреть')
-    def click_show_button(self):
-        browser.element('.btn-success').click()
-        return self
-
-    @allure.step('Проверка страницы профайла')
-    def check_profile(self):
-        browser.element('h2').should(have.text('Профиль пользователя'))
-
-
-open_profile_page = OpenProfilePage()

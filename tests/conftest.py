@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
 import os
 
-from diplom_users_tests.utils import attach
+from users_bugred_project_tests.utils import attach
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -24,7 +24,7 @@ def browser_setting():
     options = Options()
     selenoid_capabilities = {
         "browserName": "chrome",
-        #"browserVersion": "",
+        "browserVersion": "100",
         "selenoid:options": {
             "enableVNC": True,
             "enableVideo": True

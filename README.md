@@ -1,6 +1,6 @@
 # Дипломный проект QA.GURU (UI-тестирование)
 
-Данный репозиторий содержит проект - UI тестирование - часть дипломной работы, выполненной в рамках обучения на курсах QA.GURU. Проект разработан с целью продемонстрировать полученные навыки и знания в области тестирования программного обеспечения.
+Данный репозиторий содержит проект - UI тестирование сайта http://users.bugred.ru. Данный проект является частью дипломной работы, выполненной в рамках обучения на курсах QA.GURU. Проект разработан с целью продемонстрировать полученные навыки и знания в области тестирования программного обеспечения.
 
 ## Используемые инструменты
 <div>
@@ -108,8 +108,14 @@ allure serve allure-results/
 
 ## **Дополнительно**
 
-Реализована отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
-<details><summary>Пример отчета</summary>
+Реализована интеграция с Jira и отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
+<details><summary>Пример задачи в Jira </summary>
+
+<img src="resources/jira1.png" alt="task Jira">
+<img src="resources/jira2.png" alt="task Jira">
+
+</details>
+<details><summary>Пример отчета в Telegram </summary>
 
 <img src="resources/telegram.png" alt="report Telegram">
 
