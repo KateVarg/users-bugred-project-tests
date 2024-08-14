@@ -32,7 +32,7 @@ class AddTask:
 
     @allure.step('Ввод описания задачи')
     def fill_task_desc(self, desc_task):
-        browser.element('.form-control, [name="description"]').type(desc_task)
+        browser.element('textarea[name="description"]').type(desc_task)
         return self
 
     @allure.step('Нажатие на кнопку Добавить задачу')

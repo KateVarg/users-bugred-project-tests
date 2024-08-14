@@ -14,6 +14,7 @@
 <img src="resources/AllureTestOps.png" width="40" height="40"  alt="Allure TestOps"/> 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg" title="pycharm" alt="pycharm" width="40" height="40"/>&nbsp
 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="40" height="40"/>&nbsp
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" title="jira" alt="jira" width="40" height="40"/>&nbsp
 </div>
 
 ## Список автоматизированных тест-кейсов:
@@ -51,7 +52,7 @@ pytest .
 <details><summary>3. Получить отчет о прохождении тестов в allure</summary>
 
 ```
-allure serve allure-results/
+allure serve tests/allure-results/
 ```
 </details>
 
@@ -115,8 +116,15 @@ allure serve allure-results/
 <img src="resources/jira2.png" alt="task Jira">
 
 </details>
+
 <details><summary>Пример отчета в Telegram </summary>
 
 <img src="resources/telegram.png" alt="report Telegram">
+
+</details>
+
+<details><summary>Пример выполнения теста в Selenoid </summary>
+
+<img src="resources/video_example.gif">
 
 </details>
