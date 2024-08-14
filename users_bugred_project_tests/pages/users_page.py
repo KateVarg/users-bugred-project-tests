@@ -13,7 +13,7 @@ class SearchUsers:
     @allure.step('Выбор даты начала периода для поиска')
     def choose_start_date(self, start_day, start_month, start_year):
         date_value = f'{start_year}.{start_month}.{start_day}'
-        browser.execute_script(
+        browser.driver.execute_script(
             f'document.querySelector(".form-control[name=\'date_start\']").value = "{date_value}";'
         )
         return self
@@ -21,7 +21,7 @@ class SearchUsers:
     @allure.step('Выбор даты окончания периода для поиска')
     def choose_end_date(self, end_day, end_month, end_year):
         date_value = f'{end_year}.{end_month}.{end_day}'
-        browser.execute_script(
+        browser.driver.execute_script(
             f'document.querySelector(".form-control[name=\'date_end\']").value = "{date_value}";'
         )
         return self
